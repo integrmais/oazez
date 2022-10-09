@@ -16,7 +16,7 @@ const passWordMock string = "password-mock"
 const accessTokenMock string = "base64-access-token"
 
 func TestNewClient(t *testing.T) {
-	serverMock := httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+	var serverMock = httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
 		res.WriteHeader(http.StatusOK)
 		res.Write([]byte(accessTokenMock))
 	}))

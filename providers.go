@@ -10,8 +10,8 @@ import (
 type ProviderService Client
 
 type Provider struct {
-	Id           string `json:"codigo"`
-	Sequence     string `json:"sequencia"`
+	Id           int64  `json:"codigo"`
+	Sequence     int64  `json:"sequencia"`
 	Name         string `json:"nome"`
 	Street       string `json:"logradouro"`
 	Number       string `json:"numero"`
@@ -21,7 +21,7 @@ type Provider struct {
 	State        string `json:"uf"`
 	Telephone    string `json:"telefone"`
 	Mobilephone  string `json:"celular"`
-	FederalTaxId string `json:"cpfcnpj"`
+	FederalTaxId int64  `json:"cpfcnpj"`
 }
 
 func (ps *ProviderService) List() ([]Provider, error) {
