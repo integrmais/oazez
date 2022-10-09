@@ -45,8 +45,6 @@ func (ps *ProviderService) List() ([]Provider, error) {
 
 	body, _ := io.ReadAll(res.Body)
 
-	fmt.Println(url, string(body))
-
 	var providers []Provider
 	err = json.Unmarshal(body, &providers)
 	if err != nil {
