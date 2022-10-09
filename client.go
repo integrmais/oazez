@@ -15,3 +15,8 @@ type Client struct {
 	// Providers
 	Provider *ProviderService
 }
+
+type Access struct {
+	Username string `json:"Usuario"`
+	Password string `json:"Senha"`
+}

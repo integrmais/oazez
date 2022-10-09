@@ -34,7 +34,7 @@ func (ps *ProviderService) List() ([]Provider, error) {
 		return []Provider{}, err
 	}
 
-	req.Header.Add("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaWxpYWwiOiIxIiwicGVyZmlsIjoiVVNVIiwidXNlciI6IjM3IiwiQ29ubmVjdGlvbklkIjoiMjY1MiIsIkNvbm5lY3Rpb25JZEFsaWFzIjoiU0FOQ0FSRCIsInN1YnNlcSI6IiIsInN1YnRpcG8iOiJVUyIsInN1Ym5vbWUiOiJJbnRlZ3JNYWlzIiwic3VidmVuZGVkb3IiOiIiLCJjb2RpZ29tYXN0ZXIiOiIiLCJzdWIiOiIzNyIsImlzcyI6IkludGVnck1haXMiLCJob21vbG9nYWNhbyI6ZmFsc2UsImV4cCI6MTY2NTIzNDYwMH0.Y1o8DX5HKdM5QcHy7d9ENoS3N2Y9MsQDuHOW4Bzz12E")
+	req.Header.Add("Authorization", "Bearer "+ps.Token)
 
 	res, err := http.DefaultClient.Do(req)
 	if err != nil {
