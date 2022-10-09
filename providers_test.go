@@ -1,11 +1,11 @@
-package oazes_test
+package oazez_test
 
 import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
 
-	"github.com/integrmais/oazes"
+	"github.com/integrmais/oazez"
 )
 
 func TestListProviders(t *testing.T) {
@@ -59,7 +59,7 @@ func TestListProviders(t *testing.T) {
 
 	defer func() { serverMock.Close() }()
 
-	c := oazes.NewClient(serverMock.URL, databaseIdMock, userNameMock, passWordMock)
+	c := oazez.NewClient(serverMock.URL, databaseIdMock, userNameMock, passWordMock)
 
 	list, err := c.Provider.List()
 

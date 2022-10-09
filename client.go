@@ -1,4 +1,4 @@
-package oazes
+package oazez
 
 type Client struct {
 	BaseUrl string

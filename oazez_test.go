@@ -1,11 +1,11 @@
-package oazes_test
+package oazez_test
 
 import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
 
-	oazez "github.com/integrmais/oazes"
+	oazez "github.com/integrmais/oazez"
 )
 
 const baseUrlMock string = "http://localhost"

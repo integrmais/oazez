@@ -1,3 +1,3 @@
-module github.com/integrmais/oazes
+module github.com/integrmais/oazez
 
 go 1.19

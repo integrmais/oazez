@@ -1,4 +1,4 @@
-package oazes
+package oazez
 
 import (
 	"encoding/json"
