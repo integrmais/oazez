@@ -7,8 +7,8 @@ type Client struct {
 	DatabaseId string
 
 	// Username and Password
-	userName string
-	passWord string
+	Username string
+	Password string
 
 	Token string
 

@@ -15,8 +15,8 @@ func NewClient(baseUrl, databaseId, username, password string) *Client {
 	c := &Client{
 		BaseUrl:    baseUrl,
 		DatabaseId: databaseId,
-		userName:   username,
-		passWord:   password,
+		Username:   username,
+		Password:   password,
 	}
 
 	c.Provider = (*ProviderService)(c)
@@ -32,8 +32,8 @@ func (c *Client) SetAccessToken() error {
 	)
 
 	access := &Access{
-		Username: c.userName,
-		Password: c.passWord,
+		Username: c.Username,
+		Password: c.Password,
 	}
 
 	b, err := json.Marshal(access)
